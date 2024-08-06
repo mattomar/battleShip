@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'FjallaOne';
+    src: url('./fonts/Fjalla_One/FjallaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'FjallaOne', sans-serif;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    gap: 10px;
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 9px;
+    padding-top: 9px;
+
+}
+
+.logo img{
+border-radius: 30px;
+margin-top: 3px;
+padding-left: 10px;
+}
+
+.title{
+    align-self: center;
+    font-size: 33px;
+    position: relative;
+    border-left: 1px solid rgb(105, 105, 105); /* Adjust thickness and color as needed */
+    padding-left: 10px; /* Space between the line and the title */
+ 
+
+}
+
+ .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh
+
+ }
+
+ .player-grid, .computer-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2px;
+    width: 400px;
+    height: 400px;
+ }
+
+ .player-grid .grid-cell {
+    background: rgb(84, 206, 223); /* Player grid cell color */
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.player-grid .grid-cell:hover {
+    background: rgb(64, 176, 197); /* Darker color on hover */
+    cursor: pointer; /* Change cursor to indicate clickability */
+}
+
+.computer-grid .grid-cell {
+    background: #c2c2c2; /* Computer grid cell color */
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.computer-grid .grid-cell:hover {
+    background: #a2a2a2; /* Darker color on hover */
+    cursor: pointer; /* Change cursor to indicate clickability */
+}
