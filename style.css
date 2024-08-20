@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'FjallaOne';
+    src: url('./fonts/Fjalla_One/FjallaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'FjallaOne', sans-serif;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    gap: 10px;
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 9px;
+    padding-top: 9px;
+
+}
+
+.logo img{
+border-radius: 30px;
+margin-top: 3px;
+padding-left: 10px;
+}
+
+.title{
+    align-self: center;
+    font-size: 33px;
+    position: relative;
+    border-left: 1px solid rgb(105, 105, 105); /* Adjust thickness and color as needed */
+    padding-left: 10px; /* Space between the line and the title */
+ 
+
+}
+
+ .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh
+
+ }
+
+ .player-grid, .computer-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2px;
+    width: 400px;
+    height: 400px;
+ }
+
+ .player-grid .grid-cell {
+    background: rgb(84, 206, 223); /* Player grid cell color */
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.player-grid .grid-cell:hover {
+    background: rgb(64, 176, 197); /* Darker color on hover */
+    cursor: pointer; /* Change cursor to indicate clickability */
+}
+
+.computer-grid .grid-cell {
+    background: #c2c2c2; /* Computer grid cell color */
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.computer-grid .grid-cell:hover {
+    background: #a2a2a2; /* Darker color on hover */
+    cursor: pointer; /* Change cursor to indicate clickability */
+}
+
+.ship-cell {
+    border: 2px solid red; /* Adjust the color and width as needed */
+}
+
+.computer-grid .hit-cell{
+     background: #bb0000; /* Darker color on hover */
+ }
+
+ .computer-grid .missed-cell{
+    background: rgb(59, 59, 59); /* Darker color on hover */
+
+ }
+
+ .player-grid .hit-cell{
+    background: #bb0000; /* Darker color on hover */
+}
+
+.player-grid .missed-cell{
+    background: rgb(59, 59, 59); /* Darker color on hover */
+
+}
+
+
+.button{
+    justify-content: center;
+    display: flex;
+}
+
+button {
+    background-color: rgb(84, 206, 223); /* Match the player grid cell color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Match the border-radius of the grid cells */
+    padding: 10px 20px; /* Padding for a comfortable click area */
+    font-size: 16px; /* Font size */
+    font-family: 'FjallaOne', sans-serif; /* Match the font */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    cursor: pointer; /* Indicate clickability */
+}
+
+ button:hover {
+    background-color: rgb(64, 176, 197); /* Darker shade on hover */
+}
+
+#message-card {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+}
+
+#message-card.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
